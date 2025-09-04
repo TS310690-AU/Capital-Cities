@@ -17,7 +17,7 @@ const App = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch('/api/v3.1/all');
+        const response = await fetch('/api/v3.1/all?fields=name,capital,flags');
         if (!response.ok) throw new Error('Error fetching countries');
         const data = await response.json();
 
